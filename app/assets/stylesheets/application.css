@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.lobby-container {
+  height: 550px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0px 15px;
+}
+
+.lobby-chatbar {
+  height: 550px;
+  padding: 0px;
+
+}
+
+.message-area {
+  height: 485px;
+  overflow: auto;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+}
+
+.message-timeline {
+  height: 30px;
+  background-color: #e7e7e7;
+  margin: 5px auto;
+  line-height: 30px;
+  border-radius: 15px;
+  width: 200px;
+  color: #5e5e5e;
+  text-align: center;
+}
+
+.lhs-message-bubble {
+  float: left;
+  max-width: 60%;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+}
+
+.rhs-message-bubble {
+  float: right;
+  max-width: 60%;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+}
+
+.chat-form {
+  height: 65px;
+  border: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.chat-form .col-lg-10 {
+  padding-right: 0px;
+}
