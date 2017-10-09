@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createMessage } from '../actions/action_creators';
+import { createMessage } from '../actions/message';
 import { connect } from 'react-redux';
 
 class MessageForm extends Component {

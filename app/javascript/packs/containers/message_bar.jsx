@@ -5,7 +5,7 @@ import {
   fetchInitialMessages,
   incomingMessage,
   loadMoreMessages
-} from '../actions/action_creators';
+} from '../actions/message';
 import MessageTimeline from '../components/message_timeline';
 import RightMessageBox from '../components/rhs_message_box';
 import LeftMessageBox from '../components/lhs_message_box';
@@ -37,7 +37,9 @@ class MessageBar extends Component {
   }
 
   handleScroll() {
-    if (this.refs.messageBar.scrollTop <= 50 && !this.props.loading && !this.props.finishFetching) {
+    const { loading, finishFetching } = this.props;
+
+    if (this.refs.messageBar.scrollTop <= 50 && !loading && !finishFetching) {
       const previousHeight = this.refs.messageBar.scrollHeight;
       this.props.loadMoreMessages()
         .then(() => {
