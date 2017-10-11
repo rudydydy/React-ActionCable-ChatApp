@@ -9,7 +9,6 @@ import {
 const initialState = {
   loading: true,
   finishFetching: false,
-  page: 0,
   messages: []
 }
 
@@ -24,7 +23,6 @@ export default function(state = initialState, action) {
     return {
       ...state,
       loading: false,
-      page: state.page + 1,
       messages: [...action.payload.reverse(), ...state.messages]
     }
   case CREATE_MESSAGE:
