@@ -24,7 +24,7 @@ class MessageForm extends Component {
       <div className="chat-form">
         <form onSubmit={(e) => this.handleSubmitMessage(e)}>
           <div className="form-row">
-            <div className="col-lg-10">
+            <div className="col-md-10 col-xs-8">
               <input
                 type="text"
                 className="form-control"
@@ -33,13 +33,13 @@ class MessageForm extends Component {
                 onChange={(e) => this.setState({message: e.target.value})}
               />
             </div>
-            <div className="col-lg-2">
+            <div className="col-md-2 col-xs-4">
               <button
                 disabled={this.state.message !== '' ? false : true}
                 type="submit"
                 className="btn btn-primary btn-block"
               >
-                Submit
+                Send
               </button>
             </div>
           </div>

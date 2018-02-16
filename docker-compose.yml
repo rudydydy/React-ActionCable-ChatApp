@@ -1,0 +1,25 @@
+version: "2"
+
+services:
+  redis:
+    image: redis:3.2
+
+  pg-db:
+    image: postgres:9.6
+    env_file: .env
+    volumes:
+      - db-chat-app-data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    env_file: .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app
+    depends_on:
+      - redis
+      - pg-db
+
+volumes:
+  db-chat-app-data:

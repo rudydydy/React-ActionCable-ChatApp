@@ -4,5 +4,7 @@ sample real-time chat app on lobby, with frontend using react and redux, and rub
 
 To run
 ```bash
-$ foreman start -f Procfile
+$ mv .env.example .env
+$ docker-compose up
+$ docker-compose run app rails db:create db:migrate
 ```

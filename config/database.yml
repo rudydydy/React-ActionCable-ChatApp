@@ -7,6 +7,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: pg-db
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
   pool: 5
   timeout: 5000
 
